@@ -1,0 +1,17 @@
+<!-- Static hidden form so Netlify's build bot detects and registers this form.
+     The real, JS-rendered lead form on every page submits to it via fetch(). -->
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Form Registration</title></head>
+<body>
+<form name="lead-form" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="text" name="name" />
+  <input type="text" name="mobile" />
+  <input type="email" name="email" />
+  <input type="text" name="residency" />
+  <input type="text" name="employment" />
+  <input type="text" name="mortgageAmount" />
+  <input type="text" name="bot-field" />
+</form>
+</body>
+</html>
