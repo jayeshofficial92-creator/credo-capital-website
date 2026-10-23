@@ -1,16 +1,25 @@
 <!-- Static hidden form so Netlify's build bot detects and registers this form.
-     The real, JS-rendered lead form on every page submits to it via fetch(). -->
+     The real, JS-rendered lead form on every page submits to it via fetch().
+     Every field the JS sends must be listed here, or Netlify drops it. -->
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"><title>Form Registration</title></head>
 <body>
 <form name="lead-form" data-netlify="true" netlify-honeypot="bot-field" hidden>
-  <input type="text" name="name" />
-  <input type="text" name="mobile" />
-  <input type="email" name="email" />
-  <input type="text" name="residency" />
-  <input type="text" name="employment" />
-  <input type="text" name="mortgageAmount" />
+  <label>Form Source <input type="text" name="formSource" /></label>
+  <label>Type of Purchase <input type="text" name="purchaseType" /></label>
+  <label>Residency Status <input type="text" name="residencyStatus" /></label>
+  <label>Residency Type <input type="text" name="residencyType" /></label>
+  <label>Monthly Income (AED) <input type="text" name="monthlyIncome" /></label>
+  <label>Age <input type="text" name="age" /></label>
+  <label>Employment Type <input type="text" name="employment" /></label>
+  <label>Property Value (AED) <input type="text" name="propertyValue" /></label>
+  <label>Loan Amount (AED) <input type="text" name="loanAmount" /></label>
+  <label>Outstanding Loans (AED) <input type="text" name="outstandingLoans" /></label>
+  <label>Name <input type="text" name="name" /></label>
+  <label>Email <input type="email" name="email" /></label>
+  <label>Phone/Mobile <input type="text" name="mobile" /></label>
+  <label>Submitted From <input type="text" name="pageUrl" /></label>
   <input type="text" name="bot-field" />
 </form>
 </body>
